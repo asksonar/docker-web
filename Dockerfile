@@ -14,7 +14,7 @@ CMD ["/sbin/my_init"]
 RUN rm /etc/nginx/sites-enabled/default
 # set my default site
 ADD server.conf /etc/nginx/sites-enabled/server.conf
-# add environment variables
+# add environment variables to nginx
 ADD env.conf /etc/nginx/main.d/env.conf
 
 # this should also be set via -v /local/path/to/src:/home/app/webapp
